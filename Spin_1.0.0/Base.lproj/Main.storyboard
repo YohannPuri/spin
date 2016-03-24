@@ -27,8 +27,22 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hsy-MM-MVv">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hsy-MM-MVv">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="620"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VQu-5u-vA0">
+                                        <rect key="frame" x="277" y="285" width="46" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="46" id="25k-k3-y7R"/>
+                                            <constraint firstAttribute="height" constant="30" id="rfG-aI-j3S"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="VQu-5u-vA0" firstAttribute="centerY" secondItem="hsy-MM-MVv" secondAttribute="centerY" id="lbL-Ft-iId"/>
+                                    <constraint firstItem="VQu-5u-vA0" firstAttribute="centerX" secondItem="hsy-MM-MVv" secondAttribute="centerX" id="uqV-73-wtu"/>
+                                </constraints>
                             </scrollView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gpz-R1-G42" customClass="optionsButton" customModule="Spin_1_0_0" customModuleProvider="target">
                                 <rect key="frame" x="30" y="65" width="45" height="45"/>
@@ -40,6 +54,42 @@
                                     <action selector="opButtonClicked:" destination="Dlu-Qr-Pah" eventType="touchUpInside" id="Y7w-eo-zEX"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Brp-CL-Imf" customClass="optionsButton" customModule="Spin_1_0_0" customModuleProvider="target">
+                                <rect key="frame" x="530" y="65" width="45" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="45" id="IwH-Z8-vqc"/>
+                                    <constraint firstAttribute="height" constant="45" id="ywh-Pt-Lxo"/>
+                                </constraints>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="umq-qv-87j" customClass="optionsButton" customModule="Spin_1_0_0" customModuleProvider="target">
+                                <rect key="frame" x="530" y="540" width="45" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="45" id="aEk-eZ-N2o"/>
+                                    <constraint firstAttribute="height" constant="45" id="pK4-l3-YtY"/>
+                                </constraints>
+                            </button>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E5s-Hx-2cW" customClass="optionsButton" customModule="Spin_1_0_0" customModuleProvider="target">
+                                <rect key="frame" x="30" y="110" width="45" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="45" id="HWS-2L-hGr"/>
+                                    <constraint firstAttribute="height" constant="45" id="g1V-Fh-j1K"/>
+                                </constraints>
+                                <state key="normal" title="C"/>
+                                <connections>
+                                    <action selector="opButtonClicked:" destination="Dlu-Qr-Pah" eventType="touchUpInside" id="j1S-4K-KdU"/>
+                                </connections>
+                            </button>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6CS-Ll-cX8" customClass="optionsButton" customModule="Spin_1_0_0" customModuleProvider="target">
+                                <rect key="frame" x="30" y="155" width="45" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="45" id="9Bk-gv-mEj"/>
+                                    <constraint firstAttribute="height" constant="45" id="Jrf-Od-CzY"/>
+                                </constraints>
+                                <state key="normal" title="I"/>
+                                <connections>
+                                    <action selector="opButtonClicked:" destination="Dlu-Qr-Pah" eventType="touchUpInside" id="VJe-ha-yiG"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -47,15 +97,40 @@
                             <constraint firstItem="hsy-MM-MVv" firstAttribute="top" secondItem="ZJf-wm-r5U" secondAttribute="bottom" constant="-20" id="4TB-8u-gVj"/>
                             <constraint firstAttribute="trailingMargin" secondItem="hsy-MM-MVv" secondAttribute="trailing" constant="-20" id="5i1-ad-XqD"/>
                             <constraint firstItem="7NO-mb-ylz" firstAttribute="top" secondItem="hsy-MM-MVv" secondAttribute="bottom" constant="-20" id="8zQ-J3-J87"/>
+                            <constraint firstItem="hsy-MM-MVv" firstAttribute="height" secondItem="YtA-wF-4Ds" secondAttribute="height" id="D1n-Wp-eXa"/>
+                            <constraint firstItem="E5s-Hx-2cW" firstAttribute="leading" secondItem="YtA-wF-4Ds" secondAttribute="leadingMargin" constant="10" id="Jkm-IV-KwX"/>
+                            <constraint firstItem="Brp-CL-Imf" firstAttribute="trailing" secondItem="YtA-wF-4Ds" secondAttribute="trailingMargin" constant="-5" id="KKy-r5-Rrl"/>
+                            <constraint firstItem="hsy-MM-MVv" firstAttribute="centerY" secondItem="YtA-wF-4Ds" secondAttribute="centerY" id="PSM-se-0yg"/>
+                            <constraint firstItem="Brp-CL-Imf" firstAttribute="top" secondItem="ZJf-wm-r5U" secondAttribute="bottom" constant="45" id="TIE-i4-WnD"/>
+                            <constraint firstItem="6CS-Ll-cX8" firstAttribute="leading" secondItem="YtA-wF-4Ds" secondAttribute="leadingMargin" constant="10" id="Tn0-hf-9Cr"/>
                             <constraint firstAttribute="trailingMargin" secondItem="X9L-Bk-8l3" secondAttribute="trailing" constant="100" id="UQ7-Rs-963"/>
                             <constraint firstItem="hsy-MM-MVv" firstAttribute="leading" secondItem="YtA-wF-4Ds" secondAttribute="leadingMargin" constant="-20" id="aly-IL-Gha"/>
                             <constraint firstItem="Gpz-R1-G42" firstAttribute="leading" secondItem="YtA-wF-4Ds" secondAttribute="leadingMargin" constant="10" id="bvN-oW-bdI"/>
+                            <constraint firstItem="6CS-Ll-cX8" firstAttribute="top" secondItem="E5s-Hx-2cW" secondAttribute="bottom" id="fuO-ib-QaB"/>
                             <constraint firstItem="X9L-Bk-8l3" firstAttribute="top" secondItem="ZJf-wm-r5U" secondAttribute="bottom" constant="10" id="h4u-15-dwn"/>
+                            <constraint firstItem="7NO-mb-ylz" firstAttribute="top" secondItem="umq-qv-87j" secondAttribute="bottom" constant="15" id="hV8-az-Wkc"/>
+                            <constraint firstItem="E5s-Hx-2cW" firstAttribute="top" secondItem="Gpz-R1-G42" secondAttribute="bottom" id="jl1-Jr-STl"/>
+                            <constraint firstItem="hsy-MM-MVv" firstAttribute="width" secondItem="YtA-wF-4Ds" secondAttribute="width" id="jmO-td-duZ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="umq-qv-87j" secondAttribute="trailing" constant="5" id="ltX-iP-Z9d"/>
                             <constraint firstItem="X9L-Bk-8l3" firstAttribute="leading" secondItem="YtA-wF-4Ds" secondAttribute="leadingMargin" constant="100" id="pZV-vG-Xuz"/>
+                            <constraint firstItem="hsy-MM-MVv" firstAttribute="centerX" secondItem="YtA-wF-4Ds" secondAttribute="centerX" id="vBb-nI-mlb"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="4TB-8u-gVj"/>
+                                <exclude reference="5i1-ad-XqD"/>
+                                <exclude reference="aly-IL-Gha"/>
+                                <exclude reference="8zQ-J3-J87"/>
+                            </mask>
+                        </variation>
                     </view>
                     <connections>
+                        <outlet property="addButton" destination="Brp-CL-Imf" id="y8S-St-Kcu"/>
+                        <outlet property="categoryButton" destination="E5s-Hx-2cW" id="B3B-9G-POP"/>
+                        <outlet property="infoButton" destination="6CS-Ll-cX8" id="rqf-pu-Xj8"/>
+                        <outlet property="mainScrollView" destination="hsy-MM-MVv" id="8be-Uw-vIc"/>
                         <outlet property="opButton" destination="Gpz-R1-G42" id="UJL-tY-8Z6"/>
+                        <outlet property="zoomButton" destination="umq-qv-87j" id="apg-Bl-wE1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gyh-ZM-5Kl" userLabel="First Responder" sceneMemberID="firstResponder"/>
