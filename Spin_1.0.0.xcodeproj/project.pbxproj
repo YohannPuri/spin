@@ -14,7 +14,6 @@
 		7C87BE801CA0811600459DEC /* Spin_1_0_0Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C87BE7F1CA0811600459DEC /* Spin_1_0_0Tests.swift */; };
 		7C87BE8B1CA0811600459DEC /* Spin_1_0_0UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C87BE8A1CA0811600459DEC /* Spin_1_0_0UITests.swift */; };
 		7CEF8F0B1CA35D0B00CC7043 /* mainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CEF8F0A1CA35D0B00CC7043 /* mainViewController.swift */; };
-		7CEF8F0D1CA35D6100CC7043 /* optionsButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CEF8F0C1CA35D6100CC7043 /* optionsButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,7 +47,6 @@
 		7C87BE8A1CA0811600459DEC /* Spin_1_0_0UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spin_1_0_0UITests.swift; sourceTree = "<group>"; };
 		7C87BE8C1CA0811600459DEC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7CEF8F0A1CA35D0B00CC7043 /* mainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = mainViewController.swift; sourceTree = "<group>"; };
-		7CEF8F0C1CA35D6100CC7043 /* optionsButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = optionsButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,7 +99,6 @@
 			children = (
 				7C87BE6A1CA0811600459DEC /* AppDelegate.swift */,
 				7C87BE6E1CA0811600459DEC /* Main.storyboard */,
-				7CEF8F0C1CA35D6100CC7043 /* optionsButton.swift */,
 				7CEF8F0A1CA35D0B00CC7043 /* mainViewController.swift */,
 				7C87BE711CA0811600459DEC /* Assets.xcassets */,
 				7C87BE731CA0811600459DEC /* LaunchScreen.storyboard */,
@@ -260,7 +257,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				7C87BE6B1CA0811600459DEC /* AppDelegate.swift in Sources */,
-				7CEF8F0D1CA35D6100CC7043 /* optionsButton.swift in Sources */,
 				7CEF8F0B1CA35D0B00CC7043 /* mainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -8,14 +8,14 @@
 
 import UIKit
 
-class mainViewController: UIViewController {
+class mainViewController: UIViewController, UIScrollViewDelegate {
 
     var menuDown = false
-    @IBOutlet weak var opButton: optionsButton!
-    @IBOutlet weak var addButton: optionsButton!
-    @IBOutlet weak var infoButton: optionsButton!
-    @IBOutlet weak var zoomButton: optionsButton!
-    @IBOutlet weak var categoryButton: optionsButton!
+    @IBOutlet weak var opButton: UIButton!
+    @IBOutlet weak var addButton: UIButton!
+    @IBOutlet weak var infoButton: UIButton!
+    @IBOutlet weak var zoomButton: UIButton!
+    @IBOutlet weak var categoryButton: UIButton!
     
     
     @IBOutlet weak var mainScrollView: UIScrollView!
@@ -24,20 +24,40 @@ class mainViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        opButton.setImage(UIImage(named: "Down_Arrow"),forState: UIControlState.Normal)
-        opButton.imageEdgeInsets = UIEdgeInsets(top: 6.0,left: 3.0,bottom: 4.0,right: 3.0)
         
-        zoomButton.setImage(UIImage(named: "Magnifying_glass"),forState: UIControlState.Normal)
+        let opIm = UIImage(named: "Down_Arrow")
+        let newOpIm = opIm?.imageWithRenderingMode(UIImageRenderingMode.AlwaysTemplate)
+        
+        opButton.setImage(newOpIm, forState: .Normal)
+        opButton.imageEdgeInsets = UIEdgeInsets(top: 6.0,left: 3.0,bottom: 4.0,right: 3.0)
+        opButton.imageView!.tintColor = UIColor.purpleColor()
+        
+        let zoomIm = UIImage(named: "Magnifying_glass")
+        let newZoomIm = zoomIm?.imageWithRenderingMode(UIImageRenderingMode.AlwaysTemplate)
+        
+        zoomButton.setImage(newZoomIm,forState: UIControlState.Normal)
         zoomButton.imageEdgeInsets = UIEdgeInsets(top: 10.0,left: 10.0,bottom: 12.0,right: 10.0)
         
-        addButton.setImage(UIImage(named: "Plus_sign"),forState: UIControlState.Normal)
-        addButton.imageEdgeInsets = UIEdgeInsets(top: 10.0,left: 10.0,bottom: 12.0,right: 10.0)
+        let addIm = UIImage(named: "Plus_sign")
+        let newAddIm = addIm?.imageWithRenderingMode(UIImageRenderingMode.AlwaysTemplate)
+        
+        addButton.setImage(newAddIm,forState: UIControlState.Normal)
+        addButton.imageEdgeInsets = UIEdgeInsets(top: 5.0,left: 3.0,bottom: 5.0,right: 3.0)
+        addButton.imageView!.tintColor = UIColor.greenColor()
+        
+        let catIm = UIImage(named: "Folders")
+        let newCatIm = catIm?.imageWithRenderingMode(UIImageRenderingMode.AlwaysTemplate)
+        
+        categoryButton.setImage(newCatIm,forState: UIControlState.Normal)
+        categoryButton.imageEdgeInsets = UIEdgeInsets(top: 5.0,left: 0.0,bottom: 5.0,right: 0.0)
+        categoryButton.imageView!.tintColor = UIColor.magentaColor()
         
         self.categoryButton.alpha = 0
         self.infoButton.alpha = 0
         
-        mainScrollView.contentSize.height = 1000
-        mainScrollView.contentSize.width = 1000
+        //mainScrollView.contentSize.height = 1000
+        mainScrollView.contentSize.width = 2000
+        mainScrollView.minimumZoomScale = CGFloat(0.2)
     }
 
     override func didReceiveMemoryWarning() {
@@ -79,6 +99,9 @@ class mainViewController: UIViewController {
         }
     }
 
+    //func viewForZoomingInScrollView(scrollView: UIScrollView) -> UIView? {
+      //  return trialButton
+    //}
     /*
     // MARK: - Navigation
 
