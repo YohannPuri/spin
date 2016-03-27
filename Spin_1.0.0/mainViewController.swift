@@ -11,14 +11,12 @@ import UIKit
 class mainViewController: UIViewController, UIScrollViewDelegate {
 
     var menuDown = false
-    @IBOutlet weak var opButton: UIButton!
-    @IBOutlet weak var addButton: UIButton!
-    @IBOutlet weak var infoButton: UIButton!
-    @IBOutlet weak var zoomButton: UIButton!
-    @IBOutlet weak var categoryButton: UIButton!
+    @IBOutlet weak var opButton: circularButton!
+    @IBOutlet weak var addButton: circularButton!
+    @IBOutlet weak var infoButton: circularButton!
+    @IBOutlet weak var categoryButton: circularButton!
     
     
-    @IBOutlet weak var mainScrollView: UIScrollView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,37 +27,41 @@ class mainViewController: UIViewController, UIScrollViewDelegate {
         let newOpIm = opIm?.imageWithRenderingMode(UIImageRenderingMode.AlwaysTemplate)
         
         opButton.setImage(newOpIm, forState: .Normal)
-        opButton.imageEdgeInsets = UIEdgeInsets(top: 6.0,left: 3.0,bottom: 4.0,right: 3.0)
-        opButton.imageView!.tintColor = UIColor.purpleColor()
-        
-        let zoomIm = UIImage(named: "Magnifying_glass")
-        let newZoomIm = zoomIm?.imageWithRenderingMode(UIImageRenderingMode.AlwaysTemplate)
-        
-        zoomButton.setImage(newZoomIm,forState: UIControlState.Normal)
-        zoomButton.imageEdgeInsets = UIEdgeInsets(top: 10.0,left: 10.0,bottom: 12.0,right: 10.0)
+        opButton.imageEdgeInsets = UIEdgeInsets(top: 10.0,left: 7.0,bottom: 8.0,right: 7.0)
+        opButton.imageView!.tintColor = UIColor.yellowColor()
+
         
         let addIm = UIImage(named: "Plus_sign")
         let newAddIm = addIm?.imageWithRenderingMode(UIImageRenderingMode.AlwaysTemplate)
         
         addButton.setImage(newAddIm,forState: UIControlState.Normal)
-        addButton.imageEdgeInsets = UIEdgeInsets(top: 5.0,left: 3.0,bottom: 5.0,right: 3.0)
-        addButton.imageView!.tintColor = UIColor.greenColor()
+        addButton.imageEdgeInsets = UIEdgeInsets(top: 10.0,left: 7.0,bottom: 10.0,right: 7.0)
+        addButton.imageView!.tintColor = UIColor(red: 0, green: 255/255, blue: 34/255, alpha: 255/255)
         
         let catIm = UIImage(named: "Folders")
         let newCatIm = catIm?.imageWithRenderingMode(UIImageRenderingMode.AlwaysTemplate)
         
         categoryButton.setImage(newCatIm,forState: UIControlState.Normal)
-        categoryButton.imageEdgeInsets = UIEdgeInsets(top: 5.0,left: 0.0,bottom: 5.0,right: 0.0)
-        categoryButton.imageView!.tintColor = UIColor.magentaColor()
+        categoryButton.imageEdgeInsets = UIEdgeInsets(top: 12.0,left: 7.0,bottom: 12.0,right: 7.0)
+        categoryButton.imageView!.tintColor = UIColor.yellowColor()
         
         self.categoryButton.alpha = 0
         self.infoButton.alpha = 0
         
         //mainScrollView.contentSize.height = 1000
-        mainScrollView.contentSize.width = 2000
-        mainScrollView.minimumZoomScale = CGFloat(0.2)
+        
+        
+        
+        
+        // CALCULATE HORIZONTAL AND VERTICAL CONTENT SIZES HERE
+        //mainScrollView.addSubview(scrollContainer)
+        //mainScrollView.contentSize = scrollContainer.frame.size
+    
+        //mainScrollView.minimumZoomScale = CGFloat(0.5)
     }
 
+    
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -69,7 +71,7 @@ class mainViewController: UIViewController, UIScrollViewDelegate {
         
         if(menuDown){
             UIView.animateWithDuration(0.5, animations: {
-                self.opButton.center.y -= 135
+                self.opButton.center.y -= 165
                 self.opButton.transform = CGAffineTransformMakeRotation(CGFloat(0))
                 
                 self.categoryButton.alpha = 0
@@ -86,7 +88,7 @@ class mainViewController: UIViewController, UIScrollViewDelegate {
         self.categoryButton.hidden = false
         self.infoButton.hidden = false
         UIView.animateWithDuration(0.5, animations: {
-                self.opButton.center.y += 135
+                self.opButton.center.y += 165
                 self.opButton.transform = CGAffineTransformMakeRotation(CGFloat(-3.141593))
                 self.categoryButton.alpha = 1
                 self.infoButton.alpha = 1
@@ -100,7 +102,7 @@ class mainViewController: UIViewController, UIScrollViewDelegate {
     }
 
     //func viewForZoomingInScrollView(scrollView: UIScrollView) -> UIView? {
-      //  return trialButton
+    //    return scrollContainer
     //}
     /*
     // MARK: - Navigation
