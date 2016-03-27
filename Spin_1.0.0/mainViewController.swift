@@ -8,8 +8,9 @@
 
 import UIKit
 
-class mainViewController: UIViewController, UIScrollViewDelegate {
+class mainViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
 
+    var testArray = ["Hi","Lets","Go"]
     var menuDown = false
     @IBOutlet weak var opButton: circularButton!
     @IBOutlet weak var addButton: circularButton!
@@ -48,16 +49,6 @@ class mainViewController: UIViewController, UIScrollViewDelegate {
         self.categoryButton.alpha = 0
         self.infoButton.alpha = 0
         
-        //mainScrollView.contentSize.height = 1000
-        
-        
-        
-        
-        // CALCULATE HORIZONTAL AND VERTICAL CONTENT SIZES HERE
-        //mainScrollView.addSubview(scrollContainer)
-        //mainScrollView.contentSize = scrollContainer.frame.size
-    
-        //mainScrollView.minimumZoomScale = CGFloat(0.5)
     }
 
     
@@ -101,9 +92,23 @@ class mainViewController: UIViewController, UIScrollViewDelegate {
         }
     }
 
-    //func viewForZoomingInScrollView(scrollView: UIScrollView) -> UIView? {
-    //    return scrollContainer
-    //}
+
+    
+    func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
+        return 2
+    }
+    func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return testArray.count
+    }
+    
+    func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCellWithReuseIdentifier("colCell", forIndexPath: indexPath) as! circularCollectionViewCell
+        cell.taskTitle!.text = testArray[indexPath.row]
+        cell.layer.cornerRadius = 50
+        return cell
+    }
+    
+    
     /*
     // MARK: - Navigation
 
