@@ -75,6 +75,12 @@
                                     <constraint firstAttribute="width" constant="45" id="IwH-Z8-vqc"/>
                                     <constraint firstAttribute="height" constant="45" id="ywh-Pt-Lxo"/>
                                 </constraints>
+                                <connections>
+                                    <action selector="addButtonTapped:" destination="Dlu-Qr-Pah" eventType="touchUpInside" id="QLZ-jt-8WZ"/>
+                                    <segue destination="dvA-ek-0UM" kind="popoverPresentation" identifier="addTask" popoverAnchorView="Brp-CL-Imf" id="ut4-yh-7aa">
+                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                    </segue>
+                                </connections>
                             </button>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E5s-Hx-2cW" customClass="circularButton" customModule="Spin_1_0_0" customModuleProvider="target">
                                 <rect key="frame" x="25" y="90" width="45" height="45"/>
@@ -124,6 +130,55 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gyh-ZM-5Kl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="761" y="-77"/>
+        </scene>
+        <!--Add Task View Controller-->
+        <scene sceneID="GtB-ff-rOh">
+            <objects>
+                <viewController id="dvA-ek-0UM" customClass="addTaskViewController" customModule="Spin_1_0_0" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="0bK-AE-h36"/>
+                        <viewControllerLayoutGuide type="bottom" id="ztM-Gu-zP6"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="qRE-ec-xN4">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Task" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="28V-mM-ege">
+                                <rect key="frame" x="115" y="112" width="36" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jTg-gh-FZF">
+                                <rect key="frame" x="115" y="172" width="36" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Priority" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pSJ-Mb-Z9k">
+                                <rect key="frame" x="96" y="237" width="55" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="keq-kT-JSC">
+                                <rect key="frame" x="282" y="513" width="32" height="30"/>
+                                <state key="normal" title="ADD"/>
+                                <connections>
+                                    <action selector="doneButton:" destination="dvA-ek-0UM" eventType="touchUpInside" id="4RB-7T-1Ps"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.28235294119999998" green="0.82745098039999998" blue="0.7843137255" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="ztM-Gu-zP6" firstAttribute="top" secondItem="keq-kT-JSC" secondAttribute="bottom" constant="57" id="Qwq-Wp-q3U"/>
+                            <constraint firstItem="keq-kT-JSC" firstAttribute="leading" secondItem="qRE-ec-xN4" secondAttribute="leadingMargin" constant="262" id="whR-ad-UwN"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="j42-BM-FPx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1477" y="-130"/>
         </scene>
     </scenes>
 </document>

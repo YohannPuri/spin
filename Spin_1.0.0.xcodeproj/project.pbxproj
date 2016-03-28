@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		7C87BE6B1CA0811600459DEC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C87BE6A1CA0811600459DEC /* AppDelegate.swift */; };
-		7C87BE701CA0811600459DEC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C87BE6E1CA0811600459DEC /* Main.storyboard */; };
 		7C87BE721CA0811600459DEC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7C87BE711CA0811600459DEC /* Assets.xcassets */; };
 		7C87BE751CA0811600459DEC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C87BE731CA0811600459DEC /* LaunchScreen.storyboard */; };
 		7C87BE801CA0811600459DEC /* Spin_1_0_0Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C87BE7F1CA0811600459DEC /* Spin_1_0_0Tests.swift */; };
@@ -16,6 +15,9 @@
 		7CB1D8B11CA760E70057491E /* circularButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CB1D8B01CA760E70057491E /* circularButton.swift */; };
 		7CD0EE971CA7904E00867CBD /* circularCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CD0EE961CA7904E00867CBD /* circularCollectionViewCell.swift */; };
 		7CEF8F0B1CA35D0B00CC7043 /* mainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CEF8F0A1CA35D0B00CC7043 /* mainViewController.swift */; };
+		7CF47C461CA8A93E0060FA3A /* Spin_1.0.0.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7CF47C441CA8A93E0060FA3A /* Spin_1.0.0.xcdatamodeld */; };
+		7CF47C851CA8B1150060FA3A /* addTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CF47C841CA8B1150060FA3A /* addTaskViewController.swift */; };
+		7CF47C891CA8B8D10060FA3A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7CF47C881CA8B8D10060FA3A /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,7 +40,6 @@
 /* Begin PBXFileReference section */
 		7C87BE671CA0811600459DEC /* Spin_1.0.0.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Spin_1.0.0.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C87BE6A1CA0811600459DEC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		7C87BE6F1CA0811600459DEC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7C87BE711CA0811600459DEC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7C87BE741CA0811600459DEC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7C87BE761CA0811600459DEC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -51,6 +52,9 @@
 		7CB1D8B01CA760E70057491E /* circularButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = circularButton.swift; sourceTree = "<group>"; };
 		7CD0EE961CA7904E00867CBD /* circularCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = circularCollectionViewCell.swift; sourceTree = "<group>"; };
 		7CEF8F0A1CA35D0B00CC7043 /* mainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = mainViewController.swift; sourceTree = "<group>"; };
+		7CF47C451CA8A93E0060FA3A /* Spin_1.0.0.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Spin_1.0.0.xcdatamodel; sourceTree = "<group>"; };
+		7CF47C841CA8B1150060FA3A /* addTaskViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = addTaskViewController.swift; sourceTree = "<group>"; };
+		7CF47C881CA8B8D10060FA3A /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,10 +106,12 @@
 			isa = PBXGroup;
 			children = (
 				7C87BE6A1CA0811600459DEC /* AppDelegate.swift */,
-				7C87BE6E1CA0811600459DEC /* Main.storyboard */,
+				7CF47C441CA8A93E0060FA3A /* Spin_1.0.0.xcdatamodeld */,
+				7CF47C841CA8B1150060FA3A /* addTaskViewController.swift */,
 				7CD0EE961CA7904E00867CBD /* circularCollectionViewCell.swift */,
 				7CEF8F0A1CA35D0B00CC7043 /* mainViewController.swift */,
 				7CB1D8B01CA760E70057491E /* circularButton.swift */,
+				7CF47C881CA8B8D10060FA3A /* Main.storyboard */,
 				7C87BE711CA0811600459DEC /* Assets.xcassets */,
 				7C87BE731CA0811600459DEC /* LaunchScreen.storyboard */,
 				7C87BE761CA0811600459DEC /* Info.plist */,
@@ -235,9 +241,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7CF47C891CA8B8D10060FA3A /* Main.storyboard in Resources */,
 				7C87BE751CA0811600459DEC /* LaunchScreen.storyboard in Resources */,
 				7C87BE721CA0811600459DEC /* Assets.xcassets in Resources */,
-				7C87BE701CA0811600459DEC /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -263,7 +269,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				7C87BE6B1CA0811600459DEC /* AppDelegate.swift in Sources */,
+				7CF47C461CA8A93E0060FA3A /* Spin_1.0.0.xcdatamodeld in Sources */,
 				7CEF8F0B1CA35D0B00CC7043 /* mainViewController.swift in Sources */,
+				7CF47C851CA8B1150060FA3A /* addTaskViewController.swift in Sources */,
 				7CD0EE971CA7904E00867CBD /* circularCollectionViewCell.swift in Sources */,
 				7CB1D8B11CA760E70057491E /* circularButton.swift in Sources */,
 			);
@@ -301,14 +309,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		7C87BE6E1CA0811600459DEC /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				7C87BE6F1CA0811600459DEC /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		7C87BE731CA0811600459DEC /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -511,6 +511,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		7CF47C441CA8A93E0060FA3A /* Spin_1.0.0.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				7CF47C451CA8A93E0060FA3A /* Spin_1.0.0.xcdatamodel */,
+			);
+			currentVersion = 7CF47C451CA8A93E0060FA3A /* Spin_1.0.0.xcdatamodel */;
+			path = Spin_1.0.0.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 7C87BE5F1CA0811600459DEC /* Project object */;
 }

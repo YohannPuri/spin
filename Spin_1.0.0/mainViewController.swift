@@ -7,10 +7,12 @@
 //
 
 import UIKit
+import CoreData
 
-class mainViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
+class mainViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UIPopoverPresentationControllerDelegate {
 
-    var testArray = ["Hi","Lets","Go"]
+    var tasks = [NSManagedObject]()
+    
     var menuDown = false
     @IBOutlet weak var opButton: circularButton!
     @IBOutlet weak var addButton: circularButton!
@@ -93,30 +95,50 @@ class mainViewController: UIViewController, UICollectionViewDataSource, UICollec
     }
 
 
+    @IBAction func addButtonTapped(sender: AnyObject) {
+        
+        self.performSegueWithIdentifier("addTask", sender: self)
+    
+    }
     
     func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
         return 2
     }
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return testArray.count
+        return tasks.count
     }
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("colCell", forIndexPath: indexPath) as! circularCollectionViewCell
-        cell.taskTitle!.text = testArray[indexPath.row]
+        let oneTask = tasks[indexPath.row]
+        cell.taskTitle!.text = oneTask.valueForKey("name") as? String
         cell.layer.cornerRadius = 50
         return cell
     }
     
     
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
+        
+        if segue.identifier == "addTask" {
+        
+            let vc = segue.destinationViewController as UIViewController!
+            let controller = vc.popoverPresentationController
+            if(controller != nil )
+            {
+                    controller?.delegate = self
+            }
+            vc.preferredContentSize = CGSizeMake(200,200)
+        }
     }
-    */
 
+    func adaptivePresentationStyleForPresentationController(controller: UIPresentationController) -> UIModalPresentationStyle {
+        return .None
+    }
+    
 }
