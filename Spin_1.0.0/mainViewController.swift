@@ -94,12 +94,6 @@ class mainViewController: UIViewController, UICollectionViewDataSource, UICollec
         }
     }
 
-
-    @IBAction func addButtonTapped(sender: AnyObject) {
-        
-        self.performSegueWithIdentifier("addTask", sender: self)
-    
-    }
     
     func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
         return 2
@@ -120,25 +114,12 @@ class mainViewController: UIViewController, UICollectionViewDataSource, UICollec
     
     // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    /*// In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
         
-        if segue.identifier == "addTask" {
-        
-            let vc = segue.destinationViewController as UIViewController!
-            let controller = vc.popoverPresentationController
-            if(controller != nil )
-            {
-                    controller?.delegate = self
-            }
-            vc.preferredContentSize = CGSizeMake(200,200)
-        }
-    }
+    }*/
 
-    func adaptivePresentationStyleForPresentationController(controller: UIPresentationController) -> UIModalPresentationStyle {
-        return .None
-    }
     
 }
